@@ -3,3 +3,5 @@ env.local
 .idea/*
 
 src/i18n/resource/*
+
+__pycache__/
