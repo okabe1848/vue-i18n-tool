@@ -1,0 +1,4 @@
+# For Spread Sheet operation
+gspread
+oauth2client
+googletrans

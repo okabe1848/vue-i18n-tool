@@ -1,0 +1,10 @@
+version: '2'
+services:
+  server:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    volumes:
+      - ./src:/app
+    tty: true
+    env_file: env.local
