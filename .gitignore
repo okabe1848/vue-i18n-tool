@@ -5,3 +5,5 @@ env.local
 src/i18n/resource/*
 
 __pycache__/
+
+.DS_Store

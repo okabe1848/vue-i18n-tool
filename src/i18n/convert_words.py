@@ -16,12 +16,16 @@ def __get_i18n_map():
     return res
 
 
-def __convert_words():
+def __convert_words() -> bool:
     i18n_map = __get_i18n_map()
     i18n_values = list(i18n_map.values())
     if i18n_values.count("") > 0:
         print(f"###### Failed!!! i18n key is not set. ######")
-        return
+        return False
+    size = len(i18n_values)
+    if size != len(set(i18n_values)):
+        print(f"###### Failed!!! Duplicated i18n key detected ######")
+        return False
 
     text = get_ja_text()
     ja_words = get_ja_words_with_quot()
@@ -35,9 +39,12 @@ def __convert_words():
 
     with open("i18n/resource/en.txt", mode='w') as f:
         f.write(text)
+    return True
 
 
 if __name__ == '__main__':
     print("## Read JP words and its conversation")
-    __convert_words()
-    print("## Successfully finished conversation")
+    res = __convert_words()
+    if res:
+        print("## Successfully finished conversation")
+

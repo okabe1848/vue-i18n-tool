@@ -1,8 +1,12 @@
 # vue-i18n-tool
 ## How to run
-- docker-compose build
-- docker-compose up
-- ./run-tool.sh
-- ./extract.sh
+- Copy the contents of the target vue file (with Japanese) in /ja.txt
+- Run this app
+    - ./run-tool.sh
+- Extract Japanese and list up in your Spread Sheet
+    - ./extract.sh
 - Edit your Spread Sheet
-- ./convert.sh
+- Convert vue file from JA to EN
+    - ./convert.sh
+- Insert dictionary
+    - ./dictionary.sh
