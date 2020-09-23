@@ -29,12 +29,7 @@ def get_targets() -> List:
         ja = worksheet.acell(f"{READ_COL_JA}{row}").value
         en = worksheet.acell(f"{READ_COL_EN}{row}").value
         res.append({"i18n": i18n, "ja": ja, "en": en})
-    print(f"### get_targets={get_targets}")
     return res
-    # return [
-    #     {"i18n": "okabe_test100", "ja": "岡部テスト02", "en": "Okabe Test 02"},
-    #     {"i18n": "okabe_test200", "ja": "岡部テスト03", "en": "Okabe Test 03"},
-    # ]
 
 
 def assert_targets(targets: List):

@@ -14,7 +14,7 @@ def __write_words_in_ss(words_set: Set[str]):
 
     words = list(words_set)
     size = len(words)
-    cells = worksheet.range(f"{READ_COL_JA}{READ_ROW_STARTING}:{READ_COL_EN}{str(size)}")
+    cells = worksheet.range(f"{READ_COL_JA}{READ_ROW_STARTING}:{READ_COL_EN}{str(size+READ_ROW_STARTING-1)}")
     translator = Translator()
 
     for i, cell in enumerate(cells):
