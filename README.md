@@ -10,3 +10,5 @@
     - ./convert.sh
 - Insert dictionary
     - ./dictionary.sh
+    - ./dictionary.sh
+
